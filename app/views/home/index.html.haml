@@ -1,2 +1,11 @@
-%h1 Hello
-%p How are you?
+.section-lead
+  .container
+    .row
+      .col-md-5.description-lead
+        %h1 The best training </br> for the skilled developer.
+        %h2.lead.home Register to Jumpstart Lab Online and </br>level-up your web development skills with the best training anywhere.
+        %form.form-inline{role: "form"}
+          .form-group.lead
+            %label.sr-only{for: "exampleInputEmail2"} Email address
+            %input.form-control{placeholder: "Enter email", type: "email"}
+          %button.btn.btn-success{type: "submit"} REGISTER

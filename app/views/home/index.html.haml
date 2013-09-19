@@ -1,11 +1,56 @@
 .section-lead
-  .container
-    .row
-      .col-md-5.description-lead
-        %h1 The best training </br> for the skilled developer.
-        %h2.lead.home Register to Jumpstart Lab Online and </br>level-up your web development skills with the best training anywhere.
-        %form.form-inline{role: "form"}
-          .form-group.lead
-            %label.sr-only{for: "exampleInputEmail2"} Email address
-            %input.form-control{placeholder: "Enter email", type: "email"}
-          %button.btn.btn-success{type: "submit"} REGISTER
+.container
+  .row
+    .col-md-6.description-lead
+      %h1 The best training </br> for the skilled developer.
+      %h2.lead.home Register to Jumpstart Lab Online and </br>level-up your web development skills with the best training anywhere.
+      %form.form-inline{role: "form"}
+        .form-group.lead
+          %label.sr-only{for: "exampleInputEmail2"} Email address
+          %input.form-control{placeholder: "Enter email", type: "email"}
+        %button.btn.btn-success{type: "submit"} REGISTER
+    .col-md-6.description-lead
+      %h3 Testimonials
+      %hr
+      %p.quote ”The Jumpstart Lab team of instructors helped me turn what was once a nighttime hobby into a full-time career as an engineer.”
+      %p.signature —Travis Valentine, <a href="http://www.livingsocial.com">LivingSocial</a>
+      %br
+      %p.quote ”Say goodbye to PowerPoint! With Jumpstart Lab you learn by doing. New concepts are taught through projects which are both engaging and fun.”
+      %p.signature —Michael Verdi, <a href="http://www.livingsocial.com">LivingSocial</a>
+  .row
+    .col-md-12.courses
+      %h3 Courses
+      %hr
+  .row
+    .col-md-8.course
+      %h4.course-title Refactoring in Rails
+      %p.course-description
+        %br
+        In this hands-on workshop you will be presented with an actual Rails application ripe with code smells, tight coupling, leaky encapsulation, and missing abstractions. It’s much more than a code sample, written by a real team of developers under a deadline.
+        %br
+        %br
+        Blog posts and books can make it look easy. “Here’s the synthetic example, now use X scripted transformation.” Unfortunately, codebases in the wild do not come with the right refactoring patterns hyperlinked.
+        %br
+        %br
+        We will practice identifying issues, explore strategies to attack them, and put them into practice. This is not a walk-through of every refactoring in the cannon; this is practical application of great techniques. After this workshop you will be armed to attack your ownlegacy applications.
+        %br
+        %br
+      %h6.course-title REQUIREMENTS
+      %p.course-description
+        A laptop with a working ruby development environment: ruby 1.9.3, git, any OS with compilation support (GCC on Unix, DevKit on Windows). Working understanding of Ruby and Rails (3+ months experience).
+    .col-md-4.course
+      %h6.course-title INSTRUCTOR
+      %p.course-description
+        Katrina Owen
+        %br
+        %br
+        I accidentally became a developer while pursuing a degree in molecular biology. I get a real kick out of finding ways of explaining technical subjects in simple terms. When programming, my focus is on automation, workflow optimization, and refactoring. Each week I have the great fortune to talk to smart and interesting people on the RubyRogues podcast.
+        %br
+        %br
+        Areas of Expertise
+        %br
+        Ruby, Rails, Testing, PHP
+  .row
+    .col-md-12.footer
+      %hr
+      %p Content © Casimir Creative, LLC except where licensed otherwise.

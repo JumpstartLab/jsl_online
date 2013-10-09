@@ -11,6 +11,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'pg'
 gem 'haml'
+gem 'omniauth-github'
+gem 'figaro'
 
 group :development do
   gem 'better_errors'

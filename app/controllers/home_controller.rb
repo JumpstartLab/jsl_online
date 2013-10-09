@@ -13,4 +13,8 @@ class HomeController < ApplicationController
       flash[:alert] = "Your email was not registered. Please try again."
     end
   end
+
+  def login
+    redirect_to admin_path if current_user
+  end
 end

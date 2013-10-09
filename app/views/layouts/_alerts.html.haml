@@ -1,6 +1,8 @@
-/ - if flash.notice
-/   .container
-/     .alert= flash.notice
-/ - elsif flash.alert
-/   .container
-/     .alert.alert-error= flash.alert
+- if flash.notice
+  .container
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", type: "button"} ×
+    .alert.alert-dismissable= flash.notice
+- elsif flash.alert
+  .container
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", type: "button"} ×
+    .alert.alert-error.alert-dismissable= flash.alert

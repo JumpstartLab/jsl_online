@@ -7,8 +7,9 @@ class HomeController < ApplicationController
 
     if lead.save
       redirect_to :root
-      flash[:notice] = "Your email has been sent."
+      flash[:notice] = "Your email has been registered."
     else
+      redirect_to :root
       flash[:alert] = "We could not register your email. Please try again."
     end
   end

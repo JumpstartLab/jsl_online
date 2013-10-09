@@ -30,3 +30,35 @@
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
+
+// Notifications
+
+.alert {
+  background-color: orange;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  opacity: .8;
+  padding: 15px;
+  position: relative;
+    z-index: 1000;
+}
+
+.alert.alert-error {
+  background-color: darkred;
+}
+
+button.close {
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  opacity: 0.8;
+  padding: 0;
+  position: relative;
+    right: 10px;
+    top: 15px;
+    z-index: 2000;
+}

@@ -15,6 +15,6 @@ class HomeController < ApplicationController
   end
 
   def login
-    redirect_to admin_path if current_user
+    redirect_to admin_index_path if current_user
   end
 end

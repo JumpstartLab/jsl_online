@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   def self.from_omniauth(params)
-    find_user(params) || create_user(params)
+    if authorized_users.include? username(params)
+      find_user(params) || create_user(params)
+    else
+      return false
+    end
   end
 
   def self.find_user(params)
@@ -22,5 +26,13 @@ class User < ActiveRecord::Base
 
     user.save
     user
+  end
+
+  def self.authorized_users
+    %w[novohispano burtlo kytrinyx jcasimir]
+  end
+
+  def self.username(params)
+    params.info.nickname
   end
 end

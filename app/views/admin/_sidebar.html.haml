@@ -1,0 +1,7 @@
+.col-md-3.dashboard
+  %h5.title-admin COURSES
+  %p= link_to "CREATE",   new_admin_course_path, class: "btn btn-xs btn-success btn-create"
+  %p= link_to "Active",   admin_active_courses_path
+  %p= link_to "Pending",  admin_pending_courses_path
+  %p= link_to "Archived", admin_archived_courses_path
+  %p= link_to "View All", admin_course_index_path

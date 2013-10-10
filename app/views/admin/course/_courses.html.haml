@@ -1,0 +1,18 @@
+-if @courses.count == 0
+  %p There are not any courses yet.
+- else
+  %table.table
+    %thead
+      %tr
+        %th TITLE
+        %th DATES
+        %th ACTIONS
+    %tbody
+    - @courses.each do |course|
+      %tr
+        %td= course.title
+        %td= "#{format_time(course.start_date)} - #{format_time(course.end_date)}"
+        %td
+          %button.btn.btn-success.btn-courses{type: "button"} ACTIVATE
+          %button.btn.btn-info.btn-courses{type: "button"} ARCHIVE
+          %button.btn.btn-info.btn-courses{type: "button"} SHOW

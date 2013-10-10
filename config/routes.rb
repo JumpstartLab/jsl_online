@@ -1,15 +1,21 @@
 JslOnline::Application.routes.draw do
   root 'home#index'
 
-  resources :home, only: [:create]
-
-  resources :admin
-  resources :course
-
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure',            to: redirect('/')
   get 'logout',                  to: 'sessions#destroy'
   get 'login',                   to: 'home#login'
+
+  resources :home,   only: [:create]
+  resources :course, only: [:show]
+
+  namespace :admin do
+    resources :course
+  end
+
+  get 'admin/course/active',   to: 'admin/course#active',   as: :admin_active_courses
+  get 'admin/course/pending',  to: 'admin/course#pending',  as: :admin_pending_courses
+  get 'admin/course/archived', to: 'admin/course#archived', as: :admin_archived_courses
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

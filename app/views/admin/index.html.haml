@@ -1,4 +1,16 @@
 .container
   .row
     .col-md-12
-      %h3 Welcome #{first_name(current_user.name)}
+      = image_tag("#{current_user.image}", class: "img-circle img-dashboard")
+      %h3.title-admin Welcome #{first_name(current_user.name)}
+      %h6.logout= link_to "LOGOUT", logout_path
+  .row
+    .col-md-3.dashboard
+      %h5.title-admin COURSES
+      %p Active
+      %p Pending
+      %p Archived
+      %p View All
+      %p Create
+    .col-md-8.dashboard
+      %h5.title-admin All COURSES

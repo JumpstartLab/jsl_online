@@ -4,6 +4,7 @@ JslOnline::Application.routes.draw do
   resources :home, only: [:create]
 
   resources :admin
+  resources :course
 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure',            to: redirect('/')

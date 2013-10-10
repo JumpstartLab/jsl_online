@@ -1,0 +1,18 @@
+.row
+  .col-md-6.description-lead
+    %h1 The best training </br> for the skilled developer.
+    %h2.lead.home Register to Jumpstart Lab Online and </br>level-up your web development skills with the best training anywhere.
+
+    = form_tag("/home", role: "form", action: "/home", method: "post", class: "form-inline") do
+      .form-group.lead
+        = text_field_tag :email, "", class: "form-control"
+      = submit_tag("REGISTER", class: "btn btn-success")
+
+  .col-md-6.description-lead
+    %h3 Testimonials
+    %hr
+    %p.quote ”The Jumpstart Lab team of instructors helped me turn what was once a nighttime hobby into a full-time career as an engineer.”
+    %p.signature —Travis Valentine, <a href="http://www.livingsocial.com">LivingSocial</a>
+    %br
+    %p.quote ”Say goodbye to PowerPoint! With Jumpstart Lab you learn by doing. New concepts are taught through projects which are both engaging and fun.”
+    %p.signature —Michael Verdi, <a href="http://www.livingsocial.com">LivingSocial</a>

@@ -13,6 +13,9 @@
   .col-md-3.column-course
     %h6.title-course END DATE
     %p= format_time(@course.end_date)
-  .col-md-6.column-course
+  .col-md-3.column-course
     %h6.title-course TICKETS URL
     %p= link_to @course.tickets_url, @course.tickets_url
+  .col-md-3.column-course
+    %h6.title-course PRICE
+    %p= number_to_currency(@course.price)

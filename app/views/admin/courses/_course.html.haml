@@ -1,0 +1,18 @@
+.col-md-8.dashboard
+  %h5.title-admin COURSE
+  %hr
+  %h6.title-course TITLE
+  %p= @course.title
+  %hr
+  %h6.title-course DESCRIPTION
+  %p= @course.description
+  %hr
+  .col-md-3.column-course
+    %h6.title-course START DATE
+    %p= format_time(@course.start_date)
+  .col-md-3.column-course
+    %h6.title-course END DATE
+    %p= format_time(@course.end_date)
+  .col-md-6.column-course
+    %h6.title-course TICKETS URL
+    %p= link_to @course.tickets_url, @course.tickets_url

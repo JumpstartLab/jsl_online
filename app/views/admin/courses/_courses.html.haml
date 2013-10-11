@@ -14,7 +14,7 @@
       %tbody
       - @courses.each do |course|
         %tr
-          %td= course.title
+          %td= link_to course.title, admin_course_path(course.id)
           %td= "#{format_time(course.start_date)} - #{format_time(course.end_date)}"
           - if request.original_fullpath == "/admin/courses"
             %td= course.status

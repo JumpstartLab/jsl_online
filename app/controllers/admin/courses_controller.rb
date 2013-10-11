@@ -6,7 +6,7 @@ class Admin::CoursesController < ApplicationController
   end
 
   def show
-    @courses = Course.find_by(id: params[:id])
+    @course = Course.find_by(id: params[:id])
   end
 
   def new

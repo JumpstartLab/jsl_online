@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user,
                 :authenticate_user
 
+  before_action :courses
+
   private
 
   def current_user
@@ -14,4 +16,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless current_user
   end
 
+  def courses
+    @courses ||= Course.all.order("title")
+  end
 end

@@ -45,6 +45,7 @@ class Admin::CoursesController < ApplicationController
     course.activate
 
     redirect_to active_admin_courses_path
+    flash[:notice] = "The course was activated."
   end
 
   def archive
@@ -52,6 +53,7 @@ class Admin::CoursesController < ApplicationController
     course.archive
 
     redirect_to archived_admin_courses_path
+    flash[:notice] = "The course was archived."
   end
 
   private

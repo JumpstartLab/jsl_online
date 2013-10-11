@@ -1,6 +1,10 @@
-- if current_user
-  Signed in as
-  = current_user.name
-  = link_to "Sign out", signout_path, id: "sign_out"
-- else
-  = button_to "Login", "/auth/github", class: "btn btn-success btn-large home"
+.container
+  .col-12-md
+    %h1.center JSL Online Admin
+    %p.lead.center Login with Github and start managing your online courses now.
+    - if current_user
+      Signed in as
+      = current_user.name
+      = link_to "Sign out", signout_path, id: "sign_out"
+    - else
+      = button_to "Login with Github", "/auth/github", class: "btn btn-success btn-lg btn-admin-login"

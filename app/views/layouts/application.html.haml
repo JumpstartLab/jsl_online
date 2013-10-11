@@ -6,6 +6,9 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = render 'layouts/nav'
+    - if admin_path?
+      = render 'layouts/admin_nav'
+    - else
+      = render 'layouts/public_nav'
     = render 'layouts/alerts'
     = yield

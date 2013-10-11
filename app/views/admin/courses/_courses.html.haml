@@ -1,5 +1,5 @@
 .col-md-8.dashboard
-  %h5.title-admin= courses_title(request.original_fullpath)
+  %h5.title-admin= courses_title(request)
   - if @courses.empty?
     %p There are not any courses yet.
   - else

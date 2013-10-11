@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Less here: http://lesscss.org/
 
+// Navbar
+
+.navbar {
+  z-index: 5000;
+}
+
 .navbar-default {
   background-color: #5cb85c;
   border-color: #4cae4c;
@@ -19,16 +25,8 @@
 
 // Navbar Collapsed
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+.navbar-default .navbar-toggle .navbar-collapse, .navbar-default .navbar-form .icon-bar{
   border-color: white;
-}
-
-.navbar-default .navbar-toggle {
-  border-color: white;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: white;
 }
 
 // Notifications

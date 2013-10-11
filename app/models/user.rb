@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
     if authorized_users.include? username(params)
       find_user(params) || create_user(params)
     else
-      return false
+      false
     end
   end
 

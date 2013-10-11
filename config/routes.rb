@@ -6,16 +6,23 @@ JslOnline::Application.routes.draw do
   get 'logout',                  to: 'sessions#destroy'
   get 'login',                   to: 'home#login'
 
-  resources :home,   only: [:create]
-  resources :course, only: [:show]
+  resources :home,    only: [:create]
+  resources :courses, only: [:show]
 
   namespace :admin do
-    resources :course
-  end
+    resources :courses do
+      member do
+        patch 'activate'
+        patch 'archive'
+      end
 
-  get 'admin/course/active',   to: 'admin/course#active',   as: :admin_active_courses
-  get 'admin/course/pending',  to: 'admin/course#pending',  as: :admin_pending_courses
-  get 'admin/course/archived', to: 'admin/course#archived', as: :admin_archived_courses
+      collection do
+        get 'active'
+        get 'pending'
+        get 'archived'
+      end
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

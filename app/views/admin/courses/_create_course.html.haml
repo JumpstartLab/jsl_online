@@ -1,0 +1,16 @@
+.col-md-8.dashboard
+  %h5.title-admin CREATE A NEW COURSE
+  = form_for(@course, url: admin_courses_path, class: "form") do |f|
+    %h6 TITLE
+    = f.text_field :title, class: "form-control"
+    %h6 DESCRIPTION
+    = f.text_area :description, class: "form-control"
+    %h6 TICKETS URL
+    = f.url_field :tickets_url, class: "form-control"
+    %h6 PRICE
+    = f.text_field :price, class: "form-control"
+    %h6 START DATE
+    = f.date_field :start_date, class: "form-control"
+    %h6 END DATE
+    = f.date_field :end_date, class: "form-control"
+    = f.submit "CREATE COURSE", class: "btn btn-success btn-create-course"

@@ -1,0 +1,28 @@
+.col-md-8.dashboard
+  %h5.title-admin= courses_title(request.original_fullpath)
+  - if @courses.empty?
+    %p There are not any courses yet.
+  - else
+    %table.table
+      %thead
+        %tr
+          %th TITLE
+          %th DATES
+          - if request.original_fullpath == "/admin/courses"
+            %th STATUS
+          %th ACTIONS
+      %tbody
+      - @courses.each do |course|
+        %tr
+          %td= course.title
+          %td= "#{format_time(course.start_date)} - #{format_time(course.end_date)}"
+          - if request.original_fullpath == "/admin/courses"
+            %td= course.status
+          %td
+            - case course.status
+            - when "pending"
+              = button_to "ACTIVATE", "/admin/courses/#{course.id}/activate", method: :patch, class: "btn btn-info btn-xs btn-courses"
+            - when "active"
+              = button_to "ARCHIVE", "/admin/courses/#{course.id}/archive", method: :patch, class: "btn btn-info btn-xs btn-courses"
+            - when "archived"
+              = button_to "REACTIVATE", "/admin/courses/#{course.id}/activate", method: :patch, class: "btn btn-info btn-xs btn-courses"

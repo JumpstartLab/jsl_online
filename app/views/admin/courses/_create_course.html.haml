@@ -7,10 +7,13 @@
     = f.text_area :description, class: "form-control"
     %h6 TICKETS URL
     = f.url_field :tickets_url, class: "form-control"
-    %h6 PRICE
-    = f.text_field :price, class: "form-control"
-    %h6 START DATE
-    = f.date_field :start_date, class: "form-control"
-    %h6 END DATE
-    = f.date_field :end_date, class: "form-control"
+    .col-md-4.form-price
+      %h6 PRICE
+      = f.text_field :price, class: "form-control"
+    .col-md-4.form-date
+      %h6 START DATE
+      = f.date_field :start_date, class: "form-control"
+    .col-md-4.form-date
+      %h6 END DATE
+      = f.date_field :end_date, class: "form-control"
     = f.submit "CREATE COURSE", class: "btn btn-success btn-create-course"
